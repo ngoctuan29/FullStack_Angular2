@@ -1,0 +1,32 @@
+<div>
+    <table width="100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor=" let user of users">
+                <td><a>{{user.name}} </a></td>
+                <td>{{user.gender}}</td>
+                <td>
+                    <button>Edit</button>
+                    <button (click)="OnClickViewUser(user)">Quick view</button>
+                </td>
+            </tr>
+
+            <tbody>
+    </table>
+    <div>
+        <h3>User Imformation</h3>
+        <form class="create-user">
+            <div class="row">
+                <label>Name</label>
+                <input type="text" [(ngModel)]= "SelectedUser.name" />
+            </div>
+          
+        </form>
+    </div>  
+</div>
