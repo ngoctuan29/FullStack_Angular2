@@ -1,4 +1,5 @@
 import {Component} from "angular2/core";
+import {APP_BASE_HREF} from 'angular2/platform/common';
 import {RouteConfig, RouterOutlet, RouterLink} from "angular2/router";
 import{UsersComponent} from "./components/usersComponent";
 import {CreateUserComponent} from "./components/createUserComponent"
@@ -7,6 +8,7 @@ import {CreateUserComponent} from "./components/createUserComponent"
     templateUrl: "app/layout.html",
     directives: [RouterOutlet,RouterLink]
 })
+
 @RouteConfig([
     {path:"/users", name:"Users", component: UsersComponent , useAsDefault:true},
     {path:"/Createuser", name:"Create User", component: CreateUserComponent},
